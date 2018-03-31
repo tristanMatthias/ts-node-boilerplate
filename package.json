@@ -11,11 +11,13 @@
     "clean": "rm -rf _bundles lib lib-esm",
     "build": "yarn clean && tsc && tsc -m es6 --outDir lib-esm && webpack-cli",
     "watch": "webpack-cli --watch --mode development",
-    "lint": "tslint -s node_modules/custom-tslint-formatters/formatters -t grouped src/**/*.ts --fix"
+    "lint": "tslint -s node_modules/custom-tslint-formatters/formatters -t grouped src/**/*.ts --fix",
+    "release": "release-it -n"
   },
   "devDependencies": {
     "bitbar-webpack-progress-plugin": "^1.0.0",
     "custom-tslint-formatters": "^2.3.0",
+    "release-it": "^7.3.0",
     "ts-loader": "^4.1.0",
     "tslint": "^5.9.1",
     "tslint-config-origami": "^1.0.0",
